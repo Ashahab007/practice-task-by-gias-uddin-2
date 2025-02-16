@@ -226,3 +226,56 @@ function waitingTime(arr, num) {
 
 let calculatedTime = waitingTime(interviewCandidateTime, serialNum);
 console.log(calculatedTime);
+
+//! Problem 06:
+/*  
+Remove the duplicate from an object array
+
+const relatives = [
+    { name: "Alice", member: 1 },
+    { name: "Bob", member: 2 },
+    { name: "Charlie", member: 3 },
+    { name: "Alice", member: 1 },
+    { name: "David", member: 4 },
+    { name: "Eve", member: 5 },
+    { name: "Bob", member: 2 },
+    { name: "Frank", member: 6 },
+    { name: "Grace", member: 7 },
+    { name: "Alice", member: 1 }
+ ];
+*/
+
+const relatives = [
+  { name: "Alice", member: 1 },
+  { name: "Bob", member: 2 },
+  { name: "Charlie", member: 3 },
+  { name: "Alice", member: 1 },
+  { name: "David", member: 4 },
+  { name: "Eve", member: 5 },
+  { name: "Bob", member: 2 },
+  { name: "Frank", member: 6 },
+  { name: "Grace", member: 7 },
+  { name: "Alice", member: 1 },
+];
+
+function removeDuplicate(mainlist) {
+  let newDawatList = [];
+
+  for (const relative of mainlist) {
+    let isUnique = true;
+    for (const newRelative of newDawatList) {
+      if (relative.name === newRelative.name) {
+        isUnique = false;
+        break;
+      }
+    }
+    if (isUnique) {
+      newDawatList.push(relative);
+    }
+  }
+  return newDawatList;
+  console.log(mainlist);
+}
+
+let removedList = removeDuplicate(relatives);
+console.log(removedList);
