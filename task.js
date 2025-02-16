@@ -192,5 +192,37 @@ Example: array = [ 3, 5, 7, 11, 6 ] , serial Number = 10 তাহলে এখ�
 
 Challenge 📢 : যদি প্রথম ইনপুট Array না হয় এবং ২য় ইনপুট যদি নাম্বার না হয় তাহলে Invalid Input রিটার্ন করবে।
 
-SAMPLE INPUT SAMPLE OUTPUT [ 3, 5, 7, 11, 6 ], 10 24 [13, 2], 6 24 [13, 2, 6, 7, 10], 6 0 [6], 4 12 7 , 10 Invalid Input "[6,2]", 9 Invalid Input [7, 8, 3, 4, 5], "9" Invalid Input
+SAMPLE INPUT SAMPLE OUTPUT [ 3, 5, 7, 11, 6 ], 10 24; [13, 2], 6 24; [13, 2, 6, 7, 10], 6 0; [6], 4 12 7 , 10 Invalid Input "[6,2]", 9 Invalid Input [7, 8, 3, 4, 5], "9" Invalid Input
 */
+
+let interviewCandidateTime = [3, 5, 7, 11, 6];
+let serialNum = 10;
+
+function waitingTime(arr, num) {
+  if (Array.isArray(arr) && typeof num === "number") {
+    // Calculating the total time of candidate
+    let total = 0;
+    for (const time of arr) {
+      total += time;
+    }
+    // Calculating the average time of candidate
+    let candidateAvgTime = Math.round(total / arr.length);
+
+    // Calculating the existing candidate
+
+    let existingCandidate = serialNum - arr.length - 1;
+
+    // Calculating the existing candidate average time
+
+    /* let existingCandidateAvgTime = Math.round(
+      (candidateAvgTime * existingCandidate) / arr.length
+    ); */
+    let timeRequired = candidateAvgTime * existingCandidate;
+    return `Waiting time is ${timeRequired} minutes.`;
+  } else {
+    return "Invalid Input";
+  }
+}
+
+let calculatedTime = waitingTime(interviewCandidateTime, serialNum);
+console.log(calculatedTime);
