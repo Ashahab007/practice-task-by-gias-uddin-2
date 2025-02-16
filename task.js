@@ -227,7 +227,7 @@ function waitingTime(arr, num) {
 let calculatedTime = waitingTime(interviewCandidateTime, serialNum);
 console.log(calculatedTime);
 
-//! Problem 06:
+//! Problem 06 (from conceptual session):
 /*  
 Remove the duplicate from an object array
 
