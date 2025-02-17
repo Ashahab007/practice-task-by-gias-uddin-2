@@ -279,3 +279,18 @@ function removeDuplicate(mainlist) {
 
 let removedList = removeDuplicate(relatives);
 console.log(removedList);
+
+// using includes method
+
+function removeDuplicate2(mainlist) {
+  let newDawatList = [];
+  for (const relative of mainlist) {
+    if (newDawatList.includes(relative.name) === false) {
+      newDawatList.push(relative.name);
+    }
+  }
+  return newDawatList;
+}
+
+const newList = removeDuplicate2(relatives);
+console.log(newList);
