@@ -280,7 +280,7 @@ function removeDuplicate(mainlist) {
 let removedList = removeDuplicate(relatives);
 console.log(removedList);
 
-// using includes method
+// using includes method (answer didn't find as object)
 
 function removeDuplicate2(mainlist) {
   let newDawatList = [];
